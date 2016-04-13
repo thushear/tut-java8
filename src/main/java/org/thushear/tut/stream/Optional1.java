@@ -14,6 +14,11 @@ public class Optional1 {
         System.out.println(optional.get());
         System.out.println(optional.orElse("fallback"));
 
+        Optional emptyOptional = Optional.empty();
+
+        System.out.println(emptyOptional.orElse("bbb"));
+        System.out.println(emptyOptional.orElseGet( ()-> "aaa" ));
+
         optional.ifPresent((s) -> {
             System.out.println(s.charAt(0));
         });
